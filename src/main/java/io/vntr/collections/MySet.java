@@ -70,4 +70,18 @@ public class MySet<T> implements Set<T> {
     public void clear() {
 
     }
+
+    static class MySetIterator<T> implements Iterator<T> {
+
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public T next() {
+            return null;
+        }
+    }
+
 }

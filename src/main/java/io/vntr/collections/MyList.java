@@ -120,5 +120,17 @@ public class MyList<T> implements List<T> {
     public List<T> subList(int fromIndex, int toIndex) {
         return null;
     }
-    //TODO: do this
+
+    static class MyListIterator<T> implements Iterator<T> {
+
+        @Override
+        public boolean hasNext() {
+            return false;
+        }
+
+        @Override
+        public T next() {
+            return null;
+        }
+    }
 }
