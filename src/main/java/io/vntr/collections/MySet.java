@@ -6,18 +6,36 @@ import java.util.Set;
 
 public class MySet<T> implements Set<T> {
 
+	private Object[] arr;
+	private int size;
+	
+	public MySet() {
+		arr = new Object[16];
+		size = 0;
+	}
+	
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
     public boolean contains(Object o) {
+    	if(o == null) {
+    		return false;
+    	}
+    	
+    	for(Object curr_o: arr) {
+    		if(curr_o.equals(o)) {
+    			return true;
+    		}
+    	}
+    	
         return false;
     }
 
